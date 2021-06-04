@@ -1,0 +1,78 @@
+rosdistro: 'melodic
+
+  '
+roslaunch:
+  uris: {host_192_168_1_3__43733: 'http://192.168.1.3:43733/'}
+rosversion: '1.14.11
+
+  '
+run_id: 628539dc-c54f-11eb-9e34-bc542fdf1ecf
+run_serial_msckf:
+  T_C0toI: [-0.01916508, -0.01496218, 0.99970437, 0.00519443, 0.99974371, 0.01176483,
+    0.01934191, 0.1347802, -0.01205075, 0.99981884, 0.01473287, 0.01465067, 0.0, 0.0,
+    0.0, 1.0]
+  T_C1toI: [0.02183084, -0.01312053, 0.99967558, 0.00552943, 0.99975965, 0.00230088,
+    -0.02180248, -0.12431302, -0.00201407, 0.99991127, 0.01316761, 0.01614686, 0.0,
+    0.0, 0.0, 1.0]
+  accelerometer_noise_density: 0.06
+  accelerometer_random_walk: 8.0e-05
+  calib_cam_extrinsics: true
+  calib_cam_intrinsics: true
+  calib_cam_timeoffset: true
+  calib_camimu_dt: 0.0
+  cam0_d: [-0.300267420221178, 0.090544063693053, 3.330220891093334e-05, 8.989607188457415e-05]
+  cam0_is_fisheye: false
+  cam0_k: [431.3364265799752, 432.7527965378035, 354.8956286992647, 232.5508916495161]
+  cam0_wh: [752, 480]
+  cam1_d: [-0.288105327549552, 0.074578284234601, 0.0007784489598138802, -0.0002277853975035461]
+  cam1_is_fisheye: false
+  cam1_k: [425.0258563372763, 426.7976260903337, 386.015186655088, 241.913033674344]
+  cam1_wh: [752, 480]
+  downsample_cameras: false
+  downsize_aruco: true
+  dt_slam_delay: 3.0
+  fast_threshold: 15
+  feat_rep_aruco: ANCHORED_FULL_INVERSE_DEPTH
+  feat_rep_msckf: GLOBAL_3D
+  feat_rep_slam: ANCHORED_FULL_INVERSE_DEPTH
+  gravity: [0.0, 0.0, 9.81]
+  grid_x: 5
+  grid_y: 3
+  gyroscope_noise_density: 0.005
+  gyroscope_random_walk: 3.0e-06
+  init_imu_thresh: 0.25
+  init_window_time: 0.75
+  knn_ratio: 0.7
+  max_cameras: 2
+  max_clones: 11
+  max_msckf_in_update: 40
+  max_slam: 75
+  max_slam_in_update: 25
+  min_px_dist: 5
+  multi_threading: true
+  num_aruco: 1024
+  num_pts: 250
+  path_bag: /home/nuc/DATASETS/NTU_VIRAL//sbs_02/sbs_02.bag
+  record_timing_filepath: /tmp/timing_stereo.txt
+  record_timing_information: false
+  stereo_pairs: [0, 1]
+  topic_camera0: /right/image_raw
+  topic_camera1: /left/image_raw
+  topic_imu: /imu/imu
+  try_zupt: false
+  up_aruco_chi2_multipler: 1.0
+  up_aruco_sigma_px: 1.0
+  up_msckf_chi2_multipler: 1.0
+  up_msckf_sigma_px: 1.0
+  up_slam_chi2_multipler: 1.0
+  up_slam_sigma_px: 1.0
+  use_aruco: false
+  use_fej: true
+  use_imuavg: true
+  use_klt: true
+  use_rk4int: true
+  use_stereo: true
+  zupt_chi2_multipler: 2
+  zupt_max_velocity: 0.3
+  zupt_noise_multiplier: 50.0
+use_sim_time: true
