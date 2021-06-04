@@ -1,5 +1,8 @@
 <launch>
 
+    <param name="/use_sim_time" value="true" />
+    <arg name="publish_clock" default="--clock"/>
+
     <!-- NTU VIRAL dataset -->
 
     <!-- EEE -->
@@ -111,8 +114,12 @@
         </rosparam>
 
     </node>
-
+    
     <node pkg="rviz" type="rviz" name="ov_msckf_rviz" respawn="true" output="log"
           args="-d $(find ov_msckf)/launch/ntuviral.rviz" />
+
+    <arg name="autorun" default="false"/>
+    <node required="$(arg autorun)" pkg="rosbag" type="play" name="rosbag_play"
+          args="$(arg publish_clock) $(arg bag_file) -r 1"/>
 
 </launch>

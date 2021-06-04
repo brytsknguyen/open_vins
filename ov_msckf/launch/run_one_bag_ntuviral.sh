@@ -58,11 +58,8 @@ then
 echo LOGGING ON;
 sleep 5;
 rosparam dump $EXP_OUTPUT_DIR/allparams.yaml;
-timeout $LOG_DUR rostopic echo -p --nostr --noarr /odometry/imu \
-> $EXP_OUTPUT_DIR/predict_odom.csv  \
-& \
 timeout $LOG_DUR rostopic echo -p --nostr --noarr /ov_msckf/odomimu \
-> $EXP_OUTPUT_DIR/opt_odom.csv  \
+> $EXP_OUTPUT_DIR/predict_odom.csv  \
 & \
 timeout $LOG_DUR rostopic echo -p --nostr --noarr /leica/pose/relative \
 > $EXP_OUTPUT_DIR/leica_pose.csv \
