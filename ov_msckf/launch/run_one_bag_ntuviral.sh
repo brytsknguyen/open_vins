@@ -61,13 +61,13 @@ rosparam dump $EXP_OUTPUT_DIR/allparams.yaml;
 timeout $LOG_DUR rostopic echo -p --nostr --noarr /ov_msckf/odomimu \
 > $EXP_OUTPUT_DIR/predict_odom.csv  \
 & \
-timeout $LOG_DUR rostopic echo -p --nostr --noarr /leica/pose/relative \
+timeout $LOG_DUR rostopic echo -b $DATASET_LOCATION/$EXP_NAME/$EXP_NAME.bag -p --nostr --noarr /leica/pose/relative \
 > $EXP_OUTPUT_DIR/leica_pose.csv \
 & \
-timeout $LOG_DUR rostopic echo -p --nostr --noarr /dji_sdk/imu \
+timeout $LOG_DUR rostopic echo -b $DATASET_LOCATION/$EXP_NAME/$EXP_NAME.bag -p --nostr --noarr /dji_sdk/imu \
 > $EXP_OUTPUT_DIR/dji_sdk_imu.csv \
 & \
-timeout $LOG_DUR rostopic echo -p --nostr --noarr /imu/imu \
+timeout $LOG_DUR rostopic echo -b $DATASET_LOCATION/$EXP_NAME/$EXP_NAME.bag -p --nostr --noarr /imu/imu \
 > $EXP_OUTPUT_DIR/vn100_imu.csv \
 & \
 timeout $LOG_DUR rostopic echo -p --nostr --noarr /viral2_odometry/optimization_status \
