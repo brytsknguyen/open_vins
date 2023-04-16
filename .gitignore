@@ -1,4 +1,4 @@
-cmake-build-debug
+cmake-build-*
 build
 Build
 *.*~
@@ -6,3 +6,5 @@ Build
 doxgen_generated
 *.swp
 *.swo
+doc
+.vscode
