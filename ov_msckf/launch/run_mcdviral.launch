@@ -4,15 +4,13 @@
     <arg name="publish_clock" default="--clock"/>
 
     <!-- MCD VIRAL Dataset -->
+    
+    <!-- Dataset path -->
+    <arg  name="data_path" default="/media/tmn/mySataSSD1/DATASETS/MCDVIRAL/PublishedSequences"/>
 
-    <!-- <arg  name="bag_file"   default="/media/tmn/mySataSSD2/DATASETS/MCDVIRAL/PublishedSequences/ntu_day_01/*.bag"/> -->
-    <!-- <arg  name="bag_file"   default="/media/tmn/mySataSSD2/DATASETS/MCDVIRAL/PublishedSequences/ntu_night_04/*.bag"/> -->
-
-    <!-- <arg  name="bag_file"   default="/media/tmn/mySataSSD2/DATASETS/MCDVIRAL/PublishedSequences/kth_day_06/*.bag"/> -->
-
-    <!-- <arg  name="bag_file"   default="/media/tmn/mySataSSD2/DATASETS/MCDVIRAL/PublishedSequences/tuhh_day_03/*.bag"/> -->
-    <!-- <arg  name="bag_file"   default="/media/tmn/mySataSSD2/DATASETS/MCDVIRAL/PublishedSequences/tuhh_night_07/*.bag"/> -->
-    <arg  name="bag_file"   default="/media/tmn/mySataSSD2/DATASETS/MCDVIRAL/PublishedSequences/tuhh_night_08/*.bag"/>
+    <!-- Sequence -->
+    <!-- <arg  name="bag_file"   default="$(arg data_path)/ntu_day_01/*.bag"/> -->
+    <arg  name="bag_file"   default="$(arg data_path)/ntu_night_08/*.bag"/>
 
     <arg name="config_file" value="$(find ov_msckf)/../config/mcdviral_atv/" if="$(eval 'ntu_'  in bag_file)" />
     <arg name="config_file" value="$(find ov_msckf)/../config/mcdviral_hhs/" if="$(eval 'kth_'  in bag_file)" />
