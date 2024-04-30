@@ -10,7 +10,11 @@
 
     <!-- Sequence -->
     <!-- <arg  name="bag_file"   default="$(arg data_path)/ntu_day_01/*.bag"/> -->
-    <arg  name="bag_file"   default="$(arg data_path)/ntu_night_08/*.bag"/>
+    <!-- <arg  name="bag_file"   default="$(arg data_path)/ntu_night_08/*.bag"/> -->
+
+    <arg  name="bag_file"   default="$(arg data_path)/kth_night_01/*.bag"/>
+    <!-- <arg  name="bag_file"   default="$(arg data_path)/tuhh_day_06/*.bag"/> -->
+
 
     <arg name="config_file" value="$(find ov_msckf)/../config/mcdviral_atv/" if="$(eval 'ntu_'  in bag_file)" />
     <arg name="config_file" value="$(find ov_msckf)/../config/mcdviral_hhs/" if="$(eval 'kth_'  in bag_file)" />
