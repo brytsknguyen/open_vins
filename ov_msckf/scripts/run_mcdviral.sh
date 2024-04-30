@@ -23,16 +23,16 @@ export LAUNCH_FILE=run_mcdviral.launch
 
 # Find the available sequences
 SEQUENCES=( 
-            $DATASET_LOCATION/kth_day_06
-            $DATASET_LOCATION/kth_day_09
-            $DATASET_LOCATION/kth_day_10
-            $DATASET_LOCATION/kth_night_01
-            $DATASET_LOCATION/kth_night_04
-            $DATASET_LOCATION/kth_night_05
-            $DATASET_LOCATION/ntu_day_01
-            $DATASET_LOCATION/ntu_day_02
-            $DATASET_LOCATION/ntu_day_10
-            $DATASET_LOCATION/ntu_night_04
+            # $DATASET_LOCATION/kth_day_06
+            # $DATASET_LOCATION/kth_day_09
+            # $DATASET_LOCATION/kth_day_10
+            # $DATASET_LOCATION/kth_night_01
+            # $DATASET_LOCATION/kth_night_04
+            # $DATASET_LOCATION/kth_night_05
+            # $DATASET_LOCATION/ntu_day_01
+            # $DATASET_LOCATION/ntu_day_02
+            # $DATASET_LOCATION/ntu_day_10
+            # $DATASET_LOCATION/ntu_night_04
             $DATASET_LOCATION/ntu_night_08
             $DATASET_LOCATION/ntu_night_13
             $DATASET_LOCATION/tuhh_day_02
